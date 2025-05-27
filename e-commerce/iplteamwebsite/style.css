@@ -1,0 +1,114 @@
+/* ...existing code... */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar, .footer, footer {
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+header {
+    background: linear-gradient(135deg, #2a5298 60%, #1e3c72 100%);
+    color: #fff;
+}
+
+header .btn-primary {
+    background-color: #ffd700;
+    border: none;
+    color: #1e3c72;
+    font-weight: bold;
+}
+
+header .btn-primary:hover {
+    background-color: #e6c200;
+    color: #1e3c72;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(30, 60, 114, 0.15);
+}
+
+.card-title {
+    color: #1e3c72;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #2a5298;
+}
+
+footer {
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    header .display-4 {
+        font-size: 2rem;
+    }
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header .display-4 {
+        font-size: 1.5rem;
+    }
+    header img {
+        width: 80px !important;
+    }
+    .container, .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .card-title {
+        font-size: 1.1rem;
+    }
+    .card-text {
+        font-size: 0.95rem;
+    }
+    .table {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .footer, footer {
+        font-size: 0.9rem;
+    }
+    .card-img-top {
+        height: 140px;
+        object-fit: cover;
+    }
+}
