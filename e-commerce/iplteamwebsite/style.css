@@ -1,65 +1,130 @@
 /* ...existing code... */
 
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f6f8fc;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 .navbar, .footer, footer {
-    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+    box-shadow: 0 2px 8px rgba(44, 83, 100, 0.10);
 }
 
 .navbar-brand, .navbar-nav .nav-link {
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color 0.2s;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
-    color: #ffd700 !important;
+    color: #ffb347 !important;
+    text-shadow: 0 1px 2px rgba(44,83,100,0.10);
 }
 
 header {
-    background: linear-gradient(135deg, #2a5298 60%, #1e3c72 100%);
+    background: linear-gradient(135deg, #2c5364 60%, #0f2027 100%);
     color: #fff;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 24px rgba(44, 83, 100, 0.12);
 }
 
 header .btn-primary {
-    background-color: #ffd700;
+    background-color: #ffb347;
     border: none;
-    color: #1e3c72;
+    color: #0f2027;
     font-weight: bold;
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.10);
+    transition: background 0.2s, color 0.2s;
 }
 
 header .btn-primary:hover {
-    background-color: #e6c200;
-    color: #1e3c72;
+    background-color: #ff9800;
+    color: #fff;
 }
 
 .card {
     border: none;
-    box-shadow: 0 4px 16px rgba(30, 60, 114, 0.08);
-    transition: transform 0.2s;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(44, 83, 100, 0.13);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    background: #fff;
 }
 
 .card:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(30, 60, 114, 0.15);
+    box-shadow: 0 8px 36px rgba(44, 83, 100, 0.20);
 }
 
 .card-title {
-    color: #1e3c72;
-    font-weight: 600;
+    color: #0f2027;
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
 .card-text {
-    color: #2a5298;
+    color: #2c5364;
+    font-size: 1.05rem;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    border-bottom: 2px solid #f6f8fc;
+}
+
+.table {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(44, 83, 100, 0.09);
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.table th, .table td {
+    vertical-align: middle;
 }
 
 footer {
-    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 1px;
+    margin-top: 40px;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -2px 8px rgba(44, 83, 100, 0.10);
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+}
+
+/* Section headings */
+section > h2 {
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-weight: 800;
+    color: #0f2027;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px rgba(44,83,100,0.07);
+}
+
+/* Fan Zone button */
+.btn-warning {
+    font-weight: 700;
+    color: #0f2027;
+    background: #ffb347;
+    border: none;
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-warning:hover {
+    background: #ff9800;
+    color: #fff;
 }
 
 /* Responsive tweaks */
@@ -75,6 +140,9 @@ footer {
     }
     .card {
         margin-bottom: 1rem;
+    }
+    .card-img-top {
+        height: 160px;
     }
 }
 
@@ -98,6 +166,9 @@ footer {
     .table {
         font-size: 0.95rem;
     }
+    .card-img-top {
+        height: 120px;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -108,7 +179,14 @@ footer {
         font-size: 0.9rem;
     }
     .card-img-top {
-        height: 140px;
-        object-fit: cover;
+        height: 90px;
+    }
+    section > h2 {
+        font-size: 1.2rem;
     }
 }
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap');
+
+/* ...existing code... */

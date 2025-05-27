@@ -11,17 +11,16 @@
         <div class="container">
             <nav>
                 <ul class="nav-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Education</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#education-section">Education</a></li>
                 </ul>
             </nav>
             <div class="header-text">
                 <p>WEB DEVELOPER</p>
                 <h1>Hi , I'm <span>Manikanth Reddy</span> </h1>
             </div>
-
         </div>
     </div>
 
@@ -50,6 +49,7 @@
                         </ul>
                     </div>
                     <div class="tab-contents" id="projects">
+                        <a id="projects-section"></a>
                         <ul>
                             <li>
                                 <h1 class="sub-heading">Employee Management Service</h1><br>
@@ -77,6 +77,7 @@
                     </div>
 
                     <div class="tab-contents" id="education">
+                        <a id="education-section"></a>
                         <ul>
                             <li>
                                 <h3 class="education-details">B.E. in Computer Science and Engineering</h3>
@@ -134,6 +135,56 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+
+    // Show Projects tab when navbar Projects link is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbarProjectsLink = document.querySelector('a[href="#projects-section"]');
+        if (navbarProjectsLink) {
+            navbarProjectsLink.addEventListener('click', function(e) {
+                var aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                for(tablink of tablinks){
+                    if(tablink.textContent.trim().toLowerCase() === 'projects'){
+                        tablink.classList.add("active-link");
+                    }
+                }
+                document.getElementById('projects').classList.add("active-tab");
+                e.preventDefault();
+            });
+        }
+
+        // Show Education tab when navbar Education link is clicked
+        var navbarEducationLink = document.querySelector('a[href="#education-section"]');
+        if (navbarEducationLink) {
+            navbarEducationLink.addEventListener('click', function(e) {
+                var aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                for(tablink of tablinks){
+                    if(tablink.textContent.trim().toLowerCase() === 'education'){
+                        tablink.classList.add("active-link");
+                    }
+                }
+                document.getElementById('education').classList.add("active-tab");
+                e.preventDefault();
+            });
+        }
+    });
 </script> 
 </body>
 </html>

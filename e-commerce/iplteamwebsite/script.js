@@ -21,19 +21,55 @@ document.addEventListener('DOMContentLoaded', function () {
             options: {
                 responsive: true,
                 plugins: {
-                    legend: { display: false },
+                    legend: { 
+                        display: false,
+                        labels: {
+                            color: '#fff'
+                        }
+                    },
                     title: {
                         display: true,
-                        text: 'IPL Team Wins'
+                        text: 'IPL Team Wins',
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 20
+                        }
                     }
                 },
+                layout: {
+                    padding: 24
+                },
+                backgroundColor: '#222e3c', // fallback for chart area
                 scales: {
+                    x: {
+                        ticks: { color: '#fff' },
+                        grid: { color: 'rgba(255,255,255,0.18)' },
+                        title: {
+                            display: true,
+                            text: 'Teams',
+                            color: '#fff',
+                            font: { weight: 'bold' }
+                        }
+                    },
                     y: {
                         beginAtZero: true,
-                        ticks: { stepSize: 10 }
+                        ticks: { stepSize: 10, color: '#fff' },
+                        grid: { color: 'rgba(255,255,255,0.18)' },
+                        title: {
+                            display: true,
+                            text: 'Wins',
+                            color: '#fff',
+                            font: { weight: 'bold' }
+                        }
                     }
                 }
             }
         });
+        // Add a semi-transparent dark background to the chart's parent for contrast
+        ctx.parentElement.style.background = 'rgba(34,46,60,0.85)';
+        ctx.parentElement.style.borderRadius = '16px';
+        ctx.parentElement.style.padding = '24px';
+        ctx.parentElement.style.boxShadow = '0 4px 24px rgba(34,46,60,0.18)';
     }
 });
