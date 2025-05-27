@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTFOLIO</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Education</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>WEB DEVELOPER</p>
+                <h1>Hi , I'm <span>Manikanth Reddy</span> </h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="images/___pic-2.jpg">
+                </div>
+                <div class="col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am driven by a passion for problem-solving and innovation. I aim to thrive in the tech industry by contributing to real-world solutions with my technical and collaborative skills</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programing Languages :</span><br>Java, C, Basics of Python</li>
+                            <li><span>Web Technologies :</span><br>HTML, CSS,Java Script</li>
+                            <li><span>Frameworks :</span><br> Spring Boot</li>
+                            <li><span>IDE'S :</span><br>Eclipse, Visual Studio Code,Spring Tool Suite </li>
+                            <li><span>Databases:</span><br> MYSQL, H2,MongoDB</li>
+                            <li><span>Soft Skills</span><br>Teamwork, Communication, Leadership</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li>
+                                <h1 class="sub-heading">Employee Management Service</h1><br>
+                                <ol>
+                                    <li>A full-fledged web application with Create, Read, Update, and Delete (CRUD) operations</li>
+                                    <li>Features role-based access control, strong validation, and secure data handling</li>
+                                    <li>Scalable for organizational use to manage employee records efficiently</li>
+                                    <li>Gained hands-on experience with RESTful API design using Spring Boot</li>
+                                    <li>Understood MVC architecture and integrated front-end with backend services</li>
+                                </ol>
+                            </li>
+                            <br>
+                            <br>
+                            <ul>
+                                <h1 class="sub-heading">ROCK PAPER SCISSORS GAME</h1>
+                                <ol>
+                                    <li>An interactive web-based game where users compete against an AI opponent</li>
+                                    <li>Implements randomization for AI behavior and input validation for clean gameplay</li>
+                                    <li>Built with React for a dynamic and responsive user interface</li>
+                                    <li>Ideal for understanding front-end game logic and UI/UX basics</li>
+                                    <li>Strengthened understanding of React components and state management</li>
+                                </ol>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <h3 class="education-details">B.E. in Computer Science and Engineering</h3>
+                                <ul>
+                                    <li>Neil Gogte Institute of Technology</li>
+                                    <li>CGPA : 8.6</li>
+                                    <li>2022 - 2026</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <br>
+                            <li>
+                                <h3 class="education-details">Intermediate (MPC)</h3>
+                                <ul>
+                                    <li>Sri Chaitanya Junior College</li>
+                                    <li>Percentage : 97%</li>
+                                    <li>2020 - 2022</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <br>
+                            <li >
+                                <h3 class="education-details">High School</h3>
+                            <ul>
+                                <li>Sri Chaitanya Techno Curriculum</li>
+                                <li>CGPA: 10</li>
+                                <li>2019 - 2020</li>
+                            </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col3">
+                    <h1 class="sub-heading">CERTIFICATIONS</h1>
+                    <div class="tab-contents2">
+                    <ol>
+                        <li>ISO Certification: Full Stack Web Developer</li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script >
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script> 
+</body>
+</html>
